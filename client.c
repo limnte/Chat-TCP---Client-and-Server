@@ -12,7 +12,7 @@ int main(void){
     if(fd < 0){
         perror("socket");
         
-        return 1;
+        return 1; 
     }
 
     struct sockaddr_in addr;
@@ -24,7 +24,7 @@ int main(void){
     if(connect(fd, (struct sockaddr*)&addr, sizeof(addr)) < 0){
         perror("connect");
 
-        return 1;
+        return 1; 
     }
 
     printf("Connected to server on port %d\n\n", PORT);
